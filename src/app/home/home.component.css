@@ -1,5 +1,4 @@
 /* box banner */
-
 .banner {
     display: flex;
     justify-content: center;
@@ -33,29 +32,23 @@
     max-width: 450px;
 }
 
-
 .banner .box .buttons {
     display: flex;
     align-items: center;
-    /*flex-wrap: wrap: permite que os itens flexíveis se quebrem em 
-    várias linhas, se necessário.*/
     flex-wrap: wrap;
     margin: 15px 0;
     width: 100%;
-    /* justify-content: space-evenly: atribui o espaço entre os itens
-     de um contêiner de forma uniforme. Isso significa que o espaço 
-     entre cada item, bem como o espaço nas extremidades do contêiner, 
-     será igual.*/
     justify-content: space-evenly;
 }
 
 .banner .box .buttons a {
     display: flex;
+    align-items: center;
     justify-content: center;
     padding: 15px;
     min-width: 170px;
     border-radius: 35px;
-    margin: 0 5px 15px;    
+    margin: 0 5px 15px;
     font-size: var(--font-size-4);
     font-weight: 700;
     background: var(--color-blue-1);
@@ -67,6 +60,63 @@
     background: var(--color-blue-2);
 }
 
+
 .banner .box .buttons a i {
     margin-right: 5px;
 }
+
+/* box about */
+
+.about .box {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*flex: Define a capacidade de um item flexível crescer, encolher e 
+a base flexível.*/
+.about .box .img{
+    flex: 1;
+    margin: 0 auto 20px;
+    margin-top: 20px;
+}
+
+.about .box .img img {
+    width: 240px;
+    border-radius: 50%;
+}
+
+.about .box .text {
+    flex: 2;
+}
+
+.about .box .text h3 {
+    color: var(--color-blue-2);
+    margin-top: 15px;
+}
+
+.about .box .text p {
+    margin: 15px 0;
+    text-align: justify;
+}
+
+.about .text a {
+    text-decoration: none;
+    color: var(--color-pink-1);
+    font-weight: 400;
+}
+
+@media (min-width: 768px) {
+    .about .box {
+        flex-direction: row;
+    }
+ 
+    .about .box .img img{
+        width: 100%;
+    }
+
+    .about .box .text {
+        padding-left: 40px;
+    }
+}    
+ 
